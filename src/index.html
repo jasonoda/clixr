@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>Title</title>
+
+    <!--meta---------------------------------------------------------------------------------------------------------- -->
+
+    <meta name="apple-mobile-web-app-capable" content="yes">
+
+    <style> body { visibility: hidden;opacity: 0;}</style>
+
+</head>
+
+<body>
+
+    <!-- <script> window.onload = function() { document.body.style.visibility = "visible"; document.body.style.opacity = "1"; document.body.style.transition = "opacity 0.3s ease-in"; }; </script> -->
+
+    <div id="feedback">asdf</div>
+
+    <div id="pageBorder">
+      <img id="logo" src="./src/images/clixrLogo.png">
+      <img class="pixelImage" id="tiktok" src="./src/images/tiktok.png">
+      <img class="pixelImage" id="insta" src="./src/images/insta.png">
+      <img class="pixelImage" id="stripeTop" src="./src/images/stripeTop.png">
+      <img class="pixelImage" id="stripeBot" src="./src/images/stripeBot.png">
+    </div>
+    
+    <div id="playerDiv">
+      <img class="pixelImage" id="player" src="./src/images/player.png">
+    </div>
+
+    <!-- loading -->
+
+    <div id="loadingImage"></div>
+    <div id="loadingBack"></div>
+
+    <div id="mainDiv">
+      <div id="dot1" class="dotCont"><img class="dot" src="./src/images/dot.png"><img class="dotw" src="./src/images/dotWhite.png"><img class="ring" src="./src/images/ring/r0.png"></div>
+      <div id="dot2" class="dotCont"><img class="dot" src="./src/images/dot.png"><img class="dotw" src="./src/images/dotWhite.png"><img class="ring" src="./src/images/ring/r0.png"></div>
+      <div id="dot3" class="dotCont"><img class="dot" src="./src/images/dot.png"><img class="dotw" src="./src/images/dotWhite.png"><img class="ring" src="./src/images/ring/r0.png"></div>
+      <div id="dot4" class="dotCont"><img class="dot" src="./src/images/dot.png"><img class="dotw" src="./src/images/dotWhite.png"><img class="ring" src="./src/images/ring/r0.png"></div>
+      <div id="dot5" class="dotCont"><img class="dot" src="./src/images/dot.png"><img class="dotw" src="./src/images/dotWhite.png"><img class="ring" src="./src/images/ring/r0.png"></div>
+      <div id="dot6" class="dotCont"><img class="dot" src="./src/images/dot.png"><img class="dotw" src="./src/images/dotWhite.png"><img class="ring" src="./src/images/ring/r0.png"></div>
+      <img class="pixelImage" id="lines" src="./src/images/lines.png">
+      <img class="pixelImage" id="vig" src="./src/images/vig.png">
+      <img class="pixelImage" id="glow" src="./src/images/glow.png">
+      <img class="pixelImage" id="main" src="./src/images/main.png">
+      <img class="pixelImage" id="lightIn" src="./src/images/lightIn.png">
+      <img class="pixelImage" id="bg" src="./src/images/background.png">
+      <div class="pixelImage" id="cloud" src="./src/images/cloud.png"></div>
+      <img class="pixelImage" id="sky" src="./src/images/sky.png">
+
+      <img class="pixelImage" id="flowers" src="./src/images/ani/flowers.gif">
+      <img class="pixelImage" id="rocks" src="./src/images/ani/rocks.png">
+      <div class="pixelImage" id="water1" src="./src/images/water1.png"></div>
+      <div class="pixelImage" id="water2" src="./src/images/water1.png"></div>
+      <img class="pixelImage" id="tree1" src="./src/images/ani/tree1.gif">
+      <img class="pixelImage" id="tree2" src="./src/images/ani/tree2.gif">
+      <img class="pixelImage" id="tree3" src="./src/images/ani/tree3.gif">
+      <img class="pixelImage" id="table" src="./src/images/ani/table.gif">
+      <img class="pixelImage" id="curtain" src="./src/images/ani/curtain.gif">
+      <img class="pixelImage" id="speaker1" src="./src/images/ani/speaker.gif">
+      <img class="pixelImage" id="speaker2" src="./src/images/ani/speaker.gif">
+
+    </div>
+
+    <!-- mixer -->
+
+    <div id="mixer">
+
+      <input type="checkbox" id="mix"><br>
+      <input type="text" id="c1_Color"><br>
+      <input type="text" id="c2_Color"><br>
+      <input type="text" id="c3_Color"><br>
+      <input type="text" id="c4_Color"><br>
+      <input type="text" id="c5_Color"><br>
+          
+      <input type="range" min="1" max="360" value="50" class="slider" id="c1_H"><br>
+      <input type="range" min="1" max="100" value="50" class="slider" id="c1_S"><br>
+      <input type="range" min="1" max="100" value="50" class="slider" id="c1_L"><br><br>
+      
+      <input type="range" min="1" max="360" value="50" class="slider" id="c2_H"><br>
+      <input type="range" min="1" max="100" value="50" class="slider" id="c2_S"><br>
+      <input type="range" min="1" max="100" value="50" class="slider" id="c2_L"><br><br>
+      
+      <input type="range" min="1" max="360" value="50" class="slider" id="c3_H"><br>
+      <input type="range" min="1" max="100" value="50" class="slider" id="c3_S"><br>
+      <input type="range" min="1" max="100" value="50" class="slider" id="c3_L"><br><br>
+      
+      <input type="range" min="1" max="360" value="50" class="slider" id="c4_H"><br>
+      <input type="range" min="1" max="100" value="50" class="slider" id="c4_S"><br>
+      <input type="range" min="1" max="100" value="50" class="slider" id="c4_L"><br><br>
+      
+      <input type="range" min="1" max="360" value="50" class="slider" id="c5_H"><br>
+      <input type="range" min="1" max="100" value="50" class="slider" id="c5_S"><br>
+      <input type="range" min="1" max="100" value="50" class="slider" id="c5_L"><br><br>
+  
+      <input type="range" min="0" max="100" value="1" class="slider" id="num1"><br>
+      <input type="range" min="0" max="100" value="1" class="slider" id="num2"><br>
+      <input type="range" min="0" max="100" value="1" class="slider" id="num3"><br>
+  
+    </div>
+      
+</body>
+</html>
