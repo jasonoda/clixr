@@ -35,7 +35,7 @@ export default class Engine{
         if (this.dt > 1) this.dt = 0;
         this.lastTime = currentTime;
     
-        document.getElementById("feedback").innerHTML = this.action;
+        document.getElementById("feedback").innerHTML = this.scene.action;
     
         if (this.action === "set up") {
             this.action = "load images";

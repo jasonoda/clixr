@@ -1,0 +1,21 @@
+{
+    "sections": [
+      {
+        "title": "Placeholder I",
+        "content": "Here is some text."
+      },
+      {
+       "title": "Placeholder II",
+        "content": "Here is some text."
+      },
+      {
+        "title": "",
+         "content": "This entry has no title"
+      },
+      {
+        "title": "This entry has no text",
+         "content": ""
+      }
+    ]
+  }
+  

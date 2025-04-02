@@ -8,6 +8,8 @@ const CopyWebpackPlugin = require('copy-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const JavaScriptObfuscator = require('webpack-obfuscator');
 
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+
 const lifecycleEvent = process.env.npm_lifecycle_event;
 
 if (lifecycleEvent === 'build') {
@@ -60,7 +62,7 @@ module.exports = {
     rules: [
       {
         test: /\.css$/,
-        use: ['style-loader', 'css-loader'],
+        use: [MiniCssExtractPlugin.loader, 'css-loader'],
       },
       {
         test: /\.(png|jpg|jpeg|gif|svg)$/i,
@@ -99,6 +101,17 @@ module.exports = {
         { from: 'src/images', to: 'src/images' },
         { from: 'src/sounds', to: 'src/sounds' },
         { from: 'src/models', to: 'src/models' },
+        { from: 'src/updateMe', to: 'src/updateMe' },
+        { from: 'src/bb.html', to: 'bb.html' },
+        { from: 'src/beats.html', to: 'beats.html' },
+        { from: 'src/journal.html', to: 'journal.html' },
+        { from: 'src/records.html', to: 'records.html' },
+        { from: 'src/clothing.html', to: 'clothing.html' },
+        { from: 'src/books.html', to: 'books.html' },
+        { from: 'src/bookOfTheCure.html', to: 'bookOfTheCure.html' },
+        { from: 'src/mother.html', to: 'mother.html' },
+        { from: 'src/wallPapers.html', to: 'wallPapers.html' },
+        { from: 'src/designConcepts.html', to: 'designConcepts.html' },
       ],
     }),
     new AssetsPlugin({
@@ -108,7 +121,9 @@ module.exports = {
       includeAllFileTypes: false,
       fileTypes: ['js', 'css', 'png', 'jpg', 'jpeg', 'svg', 'mp3', 'wav', 'ogg', 'glb', 'gltf'],
     }),
-    
+    new MiniCssExtractPlugin({
+      filename: 'styles.css',
+    }),
     // ...(isProduction
     //   ? [
           

@@ -16,10 +16,18 @@ export class Input {
           if (event.key === "ArrowRight" || event.key === "d" || event.key === "D") {
   
               this.keyRight = true;
+
+              console.log(this.e.scene.flash)
+              console.log(this.e.scene.flash.style.opacty)
+              this.e.scene.flash.style.opacty = 0;
   
           } else if (event.key === "ArrowLeft" || event.key === "a" || event.key === "A") {
   
               this.keyLeft = true;
+  
+              console.log(this.e.scene.flash)
+              console.log(this.e.scene.flash.style.opacty)
+              this.e.scene.flash.style.opacty = 1;
   
           } else if (event.key === "ArrowUp" || event.key === "w" || event.key === "W") {
   
