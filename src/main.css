@@ -277,16 +277,25 @@ body.dragging {
     padding: 24px;
 }
 
-#tiktok{
-    position: absolute;
-    right: 85px;
-    bottom: 35px;
-}
-
 #insta{
     position: absolute;
     right: 35px;
     bottom: 35px;
+    width: 21px;
+}
+
+#tiktok{
+    position: absolute;
+    right: 135px;
+    bottom: 35px;
+    width: 21px;
+}
+
+#spotify{
+    position: absolute;
+    right: 85px;
+    bottom: 35px;
+    width: 21px;
 }
 
 #playerDiv{
@@ -373,7 +382,7 @@ body.dragging {
 
 #dot2{
     left: 740px;
-    top: 710px;
+    top: 670px;
 }
 
 #dot3{
@@ -388,7 +397,7 @@ body.dragging {
 
 #dot5{
     left: 1250px;
-    top: 764px;
+    top: 738px;
 }
 
 #dot6{
@@ -502,7 +511,7 @@ body.dragging {
 }
   
 #icon4{
-    left: 255px;
+    left: 125px;
     top: 250px;
 }
   
@@ -518,9 +527,19 @@ body.dragging {
   
 #icon7{
     right: 25px;
-    top: 100px;
+    top: 50px;
 }
 
+#icon8{
+    right: 225px;
+    top: 475px;
+}
+  
+#icon9{
+    left: 255px;
+    top: 250px;
+}
+ 
 #computerClose{
     top: 10px;
     right: 10px;
@@ -772,7 +791,7 @@ t3{
     font-family: subtitle;
     font-size: 18pt;
     cursor: pointer;
-    z-index: 1000;
+    z-index: 113000;
     opacity: 0;
     padding: 7px;
     /* background-color: #008080; */
@@ -858,6 +877,7 @@ t3{
     width: auto;
     object-fit: contain;
     border: 6px solid #24124e;
+    pointer-events: none;
   }
   
   
@@ -965,14 +985,22 @@ t3{
 
 #journalContainer{
 
-    position: absolute;
+    position: fixed;
+    left: 50%;
+    top: 16%;
+    width: 100%;
+    height: 64%;
+    max-width: 700px;
+    transform: translateX(-50%);
+    z-index: 1000;
+
+    /* position: absolute;
     left: 50%;
     top: 20%;
     width: 100%;
     height: 70%;
     max-width: 700px;
     transform: translateX(-50%);
-    z-index: 1000;
     /* background-color: antiquewhite; */
     /* background-color: rgba(29, 18, 55, 0.8); */
     /* background-color: rgba(215, 210, 180, 0.8); */
@@ -1039,11 +1067,11 @@ t3{
   
 .bbContainer{
 
-    position: absolute;
+    position: fixed;
     left: 50%;
-    top: 20%;
+    top: 16%;
     width: 100%;
-    height: 70%;
+    height: 64%;
     max-width: 700px;
     transform: translateX(-50%);
     z-index: 1000;
@@ -1189,7 +1217,7 @@ t3{
 
 .merch{
     width: 228px;
-    height: 228px;
+    height: 340px;
     margin: 16px;
     object-fit: cover;
     transition: transform 0.1s ease-out;
@@ -1232,14 +1260,78 @@ t3{
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+    /* border: 1px solid green; */
 }
 
 .winImage{
     width: 100%;
-    padding: 10px;
+    /* padding: 20px; */
 }
 
 .winImageHalf{
-    width: 47%;
+    width: 100%;
+}
+
+.dlIcon{
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+    z-index: 100;
+    width: 40px;
+    cursor: pointer;
+}
+
+.wp{
+    position: relative;
+    width: 100%;
     padding: 10px;
 }
+
+.wph{
+    position: relative;
+    width: 47%;
+    padding: 10px;
+    /* border: 1px solid red; */
+}
+
+.musicImage{
+    padding: 20px;
+    cursor: pointer;
+}
+
+#winPlayer{
+    display: none;
+}
+
+.winPlayer{
+    position: absolute;
+    padding-top: 70px;
+    transform: translate(-50%);
+}
+
+@font-face {
+    font-family: DSDIGI;
+    src: url(fonts/DS-DIGI.TTF);
+}
+
+#winTrack{
+    position: absolute;
+    z-index: 100;
+    color: #00ff00;
+    font-size: 21pt;
+    font-family: DSDIGI;
+    top: 287px;
+    left: 300px;
+}
+
+
+#winTrack2{
+    position: absolute;
+    z-index: 100;
+    color: #00ff00;
+    font-size: 21pt;
+    font-family: DSDIGI;
+    top: 287px;
+    left: 365px;
+}
+

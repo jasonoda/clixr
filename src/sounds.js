@@ -4,7 +4,7 @@ export class Sounds {
     setUp(e) {
 
         this.e=e;
-        this.soundArray = ["click"];
+        this.soundArray = ["click", "track1", "track2", "track3", "track4", "track5"];
         this.loadedSounds = [];
 
         for(var i=0; i<this.soundArray.length; i++){
@@ -29,20 +29,19 @@ export class Sounds {
 
     p(type){
 
-        // console.log(this.e.soundOn+" / "+type)
+        for(var i=0; i<this.loadedSounds.length; i++){
 
-        // if(this.e.soundOn===true){
-            for(var i=0; i<this.loadedSounds.length; i++){
-
-                // console.log(type+" / "+this.loadedSounds[i].name)
-
-                if(this.loadedSounds[i].name===type){
-                    // console.log("-->"+type)
-                    this.loadedSounds[i].play();
-                }
-                
+            if(this.loadedSounds[i].name===type){
+                this.loadedSounds[i].play();
             }
-        // }
+            
+        }
 
+    }
+
+    stopAllSounds(){
+        for(var i=0; i<this.loadedSounds.length; i++){
+            this.loadedSounds[i].stop();
+        }
     }
 }

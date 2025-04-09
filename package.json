@@ -26,7 +26,7 @@
     "assets-webpack-plugin": "^7.1.1",
     "copy-webpack-plugin": "^12.0.2",
     "mini-css-extract-plugin": "^2.9.2",
-    "webpack-dev-server": "^5.2.0",
+    "webpack-dev-server": "^5.2.1",
     "webpack-obfuscator": "^3.5.1"
   }
 }

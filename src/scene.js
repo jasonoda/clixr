@@ -135,6 +135,7 @@ export class Scene {
         this.backDrop = document.getElementById("backDrop");
         this.sectionTitle = document.getElementById("sectionTitle");
         this.closeBut = document.getElementById("closeBut");
+        this.computerClose = document.getElementById("computerClose");
 
         this.closeBut.addEventListener('mousedown', (e) => {
 
@@ -216,7 +217,7 @@ export class Scene {
             if(this.action==="window"){
 
             }
-
+            this.e.s.stopAllSounds();
             document.getElementById("windowDiv").style.display="none"
             // this.windowIframe.style.display = "none";
         });
@@ -225,7 +226,7 @@ export class Scene {
             document.getElementById("windowDiv").style.display="block"
             document.getElementById("winText").innerHTML = "Candy Dispenser Design"
 
-            fetch("bookOfTheCure.html")
+            fetch("dispenser.html")
                 .then(response => response.text())
                 .then(html => {
                     const temp = document.createElement("html");
@@ -246,7 +247,7 @@ export class Scene {
             document.getElementById("windowDiv").style.display="block"
             document.getElementById("winText").innerHTML = "Purse Design"
 
-            fetch("designConcepts.html")
+            fetch("purse.html")
                 .then(response => response.text())
                 .then(html => {
                     const temp = document.createElement("html");
@@ -265,9 +266,9 @@ export class Scene {
           
         document.getElementById("icon5").addEventListener("click", () => {
             document.getElementById("windowDiv").style.display="block"
-            document.getElementById("winText").innerHTML = "Mother"
+            document.getElementById("winText").innerHTML = "Bottle Opener"
             
-            fetch("mother.html")
+            fetch("opener.html")
                 .then(response => response.text())
                 .then(html => {
                     const temp = document.createElement("html");
@@ -304,6 +305,162 @@ export class Scene {
             });
             
         });
+          
+        document.getElementById("icon8").addEventListener("click", () => {
+            document.getElementById("windowDiv").style.display="block"
+            document.getElementById("winText").innerHTML = "Wallpapers"
+            
+            fetch("wallPapers_mobile.html")
+                .then(response => response.text())
+                .then(html => {
+                    const temp = document.createElement("html");
+                    temp.innerHTML = html;
+
+                    const innerContent = temp.querySelector("body")?.innerHTML;
+
+                    if (innerContent) {
+                        this.windowInfoDiv.innerHTML = innerContent;
+                        this.windowInfoDiv.scrollTop = 0;
+                    }
+
+            });
+            
+        });
+          
+        document.getElementById("icon9").addEventListener("click", () => {
+            document.getElementById("windowDiv").style.display="block"
+            document.getElementById("winText").innerHTML = "Wallpapers"
+            
+            fetch("mother.html")
+                .then(response => response.text())
+                .then(html => {
+                    const temp = document.createElement("html");
+                    temp.innerHTML = html;
+
+                    const innerContent = temp.querySelector("body")?.innerHTML;
+
+                    if (innerContent) {
+                        this.windowInfoDiv.innerHTML = innerContent;
+                        this.windowInfoDiv.scrollTop = 0;
+
+                        document.getElementById("musicIcon1").addEventListener("click", () => {
+            
+                            this.e.s.stopAllSounds();
+                            if(this.compTrack!=1){
+                                this.e.s.p("track1");
+                                this.compTrack=1;
+                                document.getElementById("winTrack").innerHTML = "1";
+                                this.trackIsCounting=true;
+                                document.getElementById("winPlayer").style.display="block";
+                            }else{
+                                this.e.s.stopAllSounds();
+                                this.compTrack=0;
+                                document.getElementById("winTrack").innerHTML = "";
+                                this.trackIsCounting=false;
+                                document.getElementById("winPlayer").style.display="none";
+                            }
+                            this.trackCount=0;
+                            
+                        });
+                          
+                        document.getElementById("musicIcon2").addEventListener("click", () => {
+                            
+                            this.e.s.stopAllSounds();
+                            if(this.compTrack!=2){
+                                this.e.s.p("track2");
+                                this.compTrack=2;
+                                document.getElementById("winTrack").innerHTML = "2";
+                                this.trackIsCounting=true;
+                                document.getElementById("winPlayer").style.display="block";
+                            }else{
+                                this.e.s.stopAllSounds();
+                                this.compTrack=0;
+                                document.getElementById("winTrack").innerHTML = "";
+                                this.trackIsCounting=false;
+                                document.getElementById("winPlayer").style.display="none";
+                            }
+                            this.trackCount=0;
+                            
+                        });
+                          
+                        document.getElementById("musicIcon3").addEventListener("click", () => {
+                            
+                            this.e.s.stopAllSounds();
+                            if(this.compTrack!=3){
+                                this.e.s.p("track5");
+                                this.compTrack=3;
+                                document.getElementById("winTrack").innerHTML = "3";
+                                this.trackIsCounting=true;
+                                document.getElementById("winPlayer").style.display="block";
+                            }else{
+                                this.e.s.stopAllSounds();
+                                this.compTrack=0;
+                                document.getElementById("winTrack").innerHTML = "";
+                                this.trackIsCounting=false;
+                                document.getElementById("winPlayer").style.display="none";
+                            }
+                            this.trackCount=0;
+                            
+                        });
+                          
+                        document.getElementById("musicIcon4").addEventListener("click", () => {
+                            
+                            this.e.s.stopAllSounds();
+                            if(this.compTrack!=4){
+                                this.e.s.p("track4");
+                                this.compTrack=4;
+                                document.getElementById("winTrack").innerHTML = "4";
+                                this.trackIsCounting=true;
+                                document.getElementById("winPlayer").style.display="block";
+                            }else{
+                                this.e.s.stopAllSounds();
+                                this.compTrack=0;
+                                document.getElementById("winTrack").innerHTML = "";
+                                this.trackIsCounting=false;
+                                document.getElementById("winPlayer").style.display="none";
+                            }
+                            this.trackCount=0;
+                            
+                        });
+                          
+                        document.getElementById("musicIcon5").addEventListener("click", () => {
+                            
+                            this.e.s.stopAllSounds();
+                            if(this.compTrack!=5){
+                                this.e.s.p("track5");
+                                this.compTrack=5;
+                                document.getElementById("winTrack").innerHTML = "5";
+                                this.trackIsCounting=true;
+                                document.getElementById("winPlayer").style.display="block";
+                            }else{
+                                this.e.s.stopAllSounds();
+                                this.compTrack=0;
+                                document.getElementById("winTrack").innerHTML = "";
+                                this.trackIsCounting=false;
+                                document.getElementById("winPlayer").style.display="none";
+                            }
+                            this.trackCount=0;
+                           
+                            
+                        });
+
+                        document.getElementById("winPlayer").addEventListener("click", () => {
+
+                            this.e.s.stopAllSounds();
+                            this.compTrack=0;
+                            document.getElementById("winTrack").innerHTML = "";
+                            this.trackIsCounting=false;
+                            document.getElementById("winPlayer").style.display="none";
+
+                        });
+
+                    }
+
+            });
+            
+        });
+        
+        
           
         // document.getElementById("icon7").addEventListener("click", () => {
             // document.getElementById("windowDiv").style.display="block"
@@ -358,6 +515,25 @@ export class Scene {
     }
 
     update() {
+
+        if(document.getElementById("windowDiv").style.display==="block"){
+            this.computerClose.style.display="none"
+        }else{
+            this.computerClose.style.display="block"
+        }
+
+        //-----------------------
+
+        if(this.trackCount===undefined){
+            this.trackCount=0;
+        }
+
+        if(this.trackIsCounting===true){
+            this.trackCount+=this.e.dt;
+        }
+        if(document.getElementById("winTrack2")!==null){
+            document.getElementById("winTrack2").innerHTML = Math.floor(this.trackCount);
+        }
 
         //-----------------------
 
@@ -819,13 +995,13 @@ export class Scene {
 
             // ---
 
-            this.merch1 = document.getElementById("merchHolder1");
-            this.merch2 = document.getElementById("merchHolder2");
-            this.merch3 = document.getElementById("merchHolder3");
+            this.merch1 = document.getElementById("merch1");
+            // this.merch2 = document.getElementById("merchHolder2");
+            // this.merch3 = document.getElementById("merchHolder3");
 
             this.merch1.style.opacity=0;
-            this.merch2.style.opacity=0;
-            this.merch3.style.opacity=0;
+            // this.merch2.style.opacity=0;
+            // this.merch3.style.opacity=0;
 
             gsap.killTweensOf(this.merchContainer)
             this.merchContainer.style.opacity=1;
@@ -833,24 +1009,24 @@ export class Scene {
             var df = .05;
 
             gsap.to(this.merch1, { opacity: 1, duration: .2, delay: df*1, ease: "linear" });
-            gsap.to(this.merch2, { opacity: 1, duration: .2, delay: df*2, ease: "linear" });
-            gsap.to(this.merch3, { opacity: 1, duration: .2, delay: df*3, ease: "linear" });
+            // gsap.to(this.merch2, { opacity: 1, duration: .2, delay: df*2, ease: "linear" });
+            // gsap.to(this.merch3, { opacity: 1, duration: .2, delay: df*3, ease: "linear" });
 
             if(this.merchListeners===undefined){
 
                 this.merchListeners=true;
 
                 this.merch1.addEventListener('mousedown', (e) => {
-                    window.open('http://google.com', '_blank');
+                    window.open('https://www.clairebrooksmusic.com/product-page/clixr-s-world-sticker-sheet', '_blank');
                 });
 
-                this.merch2.addEventListener('mousedown', (e) => {
-                    window.open('http://google.com', '_blank');
-                });
+                // this.merch2.addEventListener('mousedown', (e) => {
+                //     window.open('http://google.com', '_blank');
+                // });
 
-                this.merch3.addEventListener('mousedown', (e) => {
-                    window.open('http://google.com', '_blank');
-                });
+                // this.merch3.addEventListener('mousedown', (e) => {
+                //     window.open('http://google.com', '_blank');
+                // });
 
 
             }
